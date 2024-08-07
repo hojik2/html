@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    pbox 가로크기가 500px
+    자식 box 3개가 pbox 가로를 꽉 차게 동일한 크기로 구성
+    -->
+    <style>
+        .pbox{
+            width: 500px;
+            background-color: skyblue;
+        }
+        .box{
+            /* 500px / 3 = 166.6666 */
+            /* calc() : 값을 연산할 수 있음. 연산자와 피연산자는 반드시 띄어쓰기 */
+            height: 100px;
+            width: calc(100% / 3);
+            /* border : 1px solid black; */
+            float: left;
+        }
+        .pbox::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .box1{
+            background-color: brown;
+        }
+        .box2{
+            background-color: aqua;
+        }
+        .box3{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body>
+    <div class="pbox">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+    <div class="pbox"></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    -block : 한 라인을 차지하는 속성
+        width / height 크기 조절 가능.
+        여백 조절 가능(margin, padding 둘다 가능)
+    -inline : 현재 라인에서 글자 크기만큼 컨텐츠를 가짐.
+        크기조절 불가능 (컨텐츠의 크기만큼 자동설정)
+        margin 불가능, padding 가능
+    - inline-block : 현재 라인에서 글자 크기만큼 컨텐츠를 가짐.
+        width / height 크기 조절 가능.
+        여백 조절 가능(margin, padding 둘다 가능)
+    - 각 태그마다 기본 속성을 가지고 있음.
+    - display로 속성 변경 가능.
+
+    margin : border 뒤쪽 외부여백
+    padding : border 안쪽 내부여백
+    margin : 10px => 상하좌우 10px
+    margin : 10px 20px => 상하 10xp / 좌우 20px
+    margin : 10px 20px 30px => 상 10px / 좌우 20px / 하 30px
+    margin : 10px 20px 30px 40px => 상 / 우 / 하 / 좌 (시계방향)
+    -->
+    <style>
+        div{
+            width: 300px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+        span{
+            width: 300px;
+            height: 50px;
+            /* padding: 50px; */
+            background-color: chocolate;
+            display: block;
+        }
+        button{
+            width: 300px;
+            height: 50px;
+            
+        }
+        a{
+            width: 300px;
+            height: 50px;
+            display: block;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>안녕하세요. 블록태그입니다.</div>
+    <span>안녕하세요. 인라인 속성입니다.</span>
+    <button>안녕하세요. 인라인블록 속성 태그입니다.</button>
+    <a href="">naver inline 속성</a>
+</body>
+</html>

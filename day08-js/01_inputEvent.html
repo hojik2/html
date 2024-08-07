@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>form 태그를 통해 데이터 받아오기</h1>
+    <ul>
+        <li>
+            input, textarea, select, html element 속성 
+        </li>
+        <li>
+            input => value 속성에 값이 맵핑 되어있음.
+            value 속성을 통해 값을 js로 가져올 수 있음.
+        </li>
+        <li>
+            select=>option, radio, checkbox value 값을 추가해주어야만 
+            선택 값을 가져올 수 있음.
+        </li>
+        <li>
+           value / innerText 값은 모두 string 처리됨.
+        </li>
+        <li>
+            string 처리된 value값을 숫자로 사용시 변환이 필요
+        </li>
+    </ul>
+    <form action="">
+        <fieldset>
+            <legend>이벤트를 활용한 데이터 전송</legend>
+            id: <input type="text" id="id" name="name입니다."><br>
+            pw: <input type="password" id="pw"><br>
+            birth: <input type="date" id="birth"><br>
+            pin: <input type="text" id="pin"><br>
+            <button type="button" onclick="clickEventInput()">전송</button>
+            <button type="button" onclick="makeList()">리스트로 전송</button>
+        </fieldset>
+    </form>
+    <!-- innerText -->
+    <h3 id="h3"></h3> 
+    <!-- innerHtml -->
+    <ol id="ol"></ol>
+
+    <script>
+        const id = document.getElementById('id');
+        const pw = document.getElementById('pw');
+        const birth = document.getElementById('birth');
+        const pin = document.getElementById('pin');
+        const h3 = document.getElementById('h3');
+        const ol = document.getElementById('ol');
+
+        function makeList(){
+            // pin 값을 숫자로 변환
+            // birth 를 날짜로 변환
+            // string => 숫자로 변환
+            // parseInt(값)  => 정수로만 변경
+            // Number(값) => 숫자로 변경될 수 있는 값 변경
+            let pinVal = Number(pin.value);
+            console.log(typeof pin.value);
+            console.log(typeof pinVal);
+
+            // new Date()
+            let birthVal = new Date(birth.value);
+            console.log(birthVal);
+            let str = `<li>id : ${id.value} / ${typeof id.value}</li>`;
+            str += `<li>pw : ${pw.value} / ${typeof pw.value}</li>`;
+            str += `<li>birth : ${birthVal} / ${typeof birthVal}</li>`;
+            str += `<li>pin : ${pinVal} / ${typeof pinVal}</li>`;
+
+            ol.innerHTML = str;
+        }
+
+        function clickEventInput(){
+            // id: value, pw: value, birth: birth, pin: pin
+            console.log(id.value);
+            let str = `id: ${id.value}, `;
+            str += `pw:${pw.value}, `;
+            str += `birth:${birth.value}, `;
+            str += `pin:${pin.value}`;
+
+            h3.innerText = str;
+            // h3.innerText = `id: ${id.value}, pw:${pw.value}, birth:${birth.value}, pin:${pin.value}`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    float 속성 : 요소를 띄우는 속성
+    - 웹 페이지에서 레이아웃들을 함께 배치할 목적으로 만든 속성
+    - 한 라인에서 요소를 각각 오른쪽 왼쪽에 배치할 때 유용하게 쓰임
+    - float 속성을 사용시 자식의 높이값을 부모가 인식하지 못함.
+    - ::after 가상요소를 사용하여 css상에 가상요소를 추가하여 부모로부터 현 요소를
+              인지하게 설정
+        
+    => 요즘엔 flex를 더 많이 사용
+    -->
+    <style>
+        .pbox{
+            background-color: beige;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            float: left;
+        }
+        .pbox::after{
+            content: "";
+            clear: both;
+            display: block;
+        }
+        .pbox2{
+            background-color: brown;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="pbox">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="pbox2">1234</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move{
+            from{
+                left: 10%;
+            }
+            25%{
+                background-color: black;
+            }
+            50%{
+                left: 80%;
+                background-color: rgba(0, 0, 255, 0.116);
+            }
+            75%{
+                background-color: rgba(0, 0, 255, 0);
+            }
+            to{
+                left: 10%;
+            }
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left: 10%;
+            top: 20px;
+            animation-name: move;
+            animation-duration: 3s;
+            animation-iteration-count: 2;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .round{
+            width: 300px;
+            border: 1px solid black;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .top, .bt{
+            width: 90%;
+            height: 50px;
+            border: 3px solid black;
+            margin: 10px auto;
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 50px;
+        }
+        .mid{
+            width: 90%;
+            height: 260px;
+            border: 3px solid black;
+            margin: 10px auto;
+            position: relative;
+        }
+        .red, .org, .yle{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+        .red{
+            top: 40px;
+            left: 40px;
+            background-color: red;
+            box-shadow: 4px 4px 4px red;
+            z-index: 3;
+        }
+        .org{
+            top: 80px;
+            left: 80px;
+            background-color: orange;
+            box-shadow: 4px 4px 4px orange;
+            z-index: 2;
+        }
+        .yle{
+            top: 120px;
+            left: 120px;
+            background-color: yellow;
+            box-shadow: 4px 4px 4px yellow;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="round">
+        <div class="top">텍스트</div>
+        <div class="mid">
+            <div class="red"></div>
+            <div class="org"></div>
+            <div class="yle"></div>
+        </div>
+        <div class="bt">텍스트</div>
+    </div>
+</body>
+</html> 

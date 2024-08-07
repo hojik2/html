@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let fileName = "20240807_javasript.string_method.html";
+
+        // 작성일자분리 (0 ~ 7까지 추출)
+        console.log(fileName.substring(0,8)); // 마지막 번지를 포함하지 않음.
+
+        // 파일명 분리 indexOf / lastIndexOf : 뒤에서부터 검색
+        console.log(fileName.lastIndexOf(".")); // 33
+        console.log(fileName.indexOf("_"));
+        console.log(fileName.substring(fileName.indexOf("_")+1, fileName.lastIndexOf(".")));
+
+        // 확장자 : substring 마지막번지를 생략하면 끝까지
+        console.log(fileName.substring(5));
+        console.log(fileName.substring(33));
+        console.log(fileName.substring(fileName.lastIndexOf(".")+1));
+    </script>
+</body>
+</html>

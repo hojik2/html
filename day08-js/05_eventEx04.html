@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        table th, td{
+            border: 1px solid black;
+            text-align: center;
+        }
+        .bgc{
+            background-color: blanchedalmond;
+        }
+        .w30{
+            width: 30%;
+        }
+        .w50{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        성적확인
+        이름 : input
+        국어 : input
+        영어 : input
+        수학 : input
+        성적계산 버튼
+        -----------------
+        ul => li
+        이름 : 홍길동
+        국어 : 87
+        영어 : 78
+        수학 : 89
+        합계 : 000 
+        평균 : 000
+    -->
+        
+    <form action="">
+        <fieldset>
+            <legend> 성적확인 </legend>
+            이름: <input type="text" id="name"><br>
+            국어: <input type="text" id="kor"><br>
+            영어: <input type="text" id="eng"> <br>
+            수학: <input type="text" id="math"><br>
+            <button type="button" id="btn">성적계산</button>
+        </fieldset>
+    </form>
+    
+    <ul id="ul"></ul>
+
+    <table id="table">
+
+    </table>
+    <script>
+        const myObject = {
+            name:'',
+            kor:'',
+            eng:'',
+            math:''
+        };
+        document.getElementById('btn').addEventListener('click',()=>{
+            let name = document.getElementById('name').value;
+            let kor = document.getElementById('kor').value;
+            let eng = document.getElementById('eng').value;
+            let math = document.getElementById('math').value;
+            
+            myObject.name = name;
+            myObject.kor = kor;
+            myObject.eng = eng;
+            myObject.math = math;
+
+            console.log(myObject);
+
+            let sum = Number(kor)+ Number(eng) + Number(math);
+            // Math.round() => 정수로 반올림. (소수점을 남기지 않음)
+            // .toFixed(2) : 소수 자리수 표현 (반올림하여 소수점 자르기)
+            let avg = (sum / 3).toFixed(2);
+
+
+            // table 태그의 테이블로 표시
+            const table = document.getElementById('table');
+            let tableStr = `<tr><th class="w30">이름</th><td class="w50">${name}</td></tr>`;
+            tableStr += `<tr><th>국어점수</th><td>${kor}</td></tr>`;
+            tableStr += `<tr><th>영어점수</th><td>${myObject.eng}</td></tr>`;
+            tableStr += `<tr><th>수학점수</th><td>${myObject.math}</td></tr>`;
+            tableStr += `<tr class="bgc"><th>합계</th><td>${sum}</td></tr>`;
+            tableStr += `<tr class="bgc"><th>평균</th><td>${avg}</td></tr>`;
+
+            table.innerHTML = tableStr;
+
+
+            let ul = document.getElementById('ul');
+            
+            let str = `<li>name : ${name}</li>`;
+            str += `<li>kor : ${kor}</li>`;
+            str += `<li>eng : ${eng}</li>`;
+            str += `<li>math : ${math}</li>`;
+            str += `<li>sum : ${sum}</li>`;
+            str += `<li>avg : ${avg}</li>`;
+
+            ul.innerHTML = str;
+
+        })
+    </script>
+
+</body>
+</html>

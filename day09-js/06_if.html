@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>조건문</h1>
+    <ul>
+        <li>
+            if / switch() : 조건문
+        </li>
+        <li>
+            if(조건식) { 실행문; } : 조건식은 반드시 true / false 여야만 한다.
+        </li>
+        <li>
+            if(조건식){
+                true 실행문;
+            }else{
+                false 실행문;
+            }
+        </li>
+        <li>
+            if(조건식){
+                true실행문;
+            }else if(조건식2){
+                true 실행문
+            }else{
+                모든조건이 false 일 경우 실행문
+            }
+        </li>
+    <script>
+        let num = 20;
+        // num 홀짝 여부를 출력
+        if(num % 2 ==0){
+            console.log("짝수입니다");
+        }else{
+            console.log("홀수입니다");
+        }
+        let kor = 78;
+        let eng = 89;
+        let math = 80;
+
+        // 합계와 평균을 콘솔에 출력
+        // 평균이 70점 이상이면 합격이라고 출력
+        let sum = kor + eng + math;
+        let avg = sum / 3;
+        console.log(`합격:${sum}, 평균:${avg}`);
+        if(avg >= 70){
+            console.log("합격")
+        }else{
+            console.log("불합격")
+        }
+    </script>
+</body>
+</html>

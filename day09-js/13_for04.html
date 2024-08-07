@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>향상된 for</h1>
+    <ul>
+        <li>
+            for of : 배열안의 내용을 탐색할 때 사용 []
+            for(let value of array){
+                code....;
+            }
+        </li>
+        <li>
+            for in : 객체 안의 내용을 탐색할 때 사용 {}
+            for(let value in Object){
+                <!-- key:value -->
+                code...;
+            }
+        </li>
+    </ul>
+    <h3>약수 출력하기</h3>
+    <input type="text" id="num">
+    <button type="button" id="btn">약수 출력</button>
+    <h3 id="result">
+        약수 출력 / 개수<br>
+    </h3>
+    <script>
+        // 약수는 1~ 나자신의 수(num) 까지 나눈 나머지가 0인수
+        // 6%1=0  6%2=0  6%3=0  6%4=2 6%5=1 6%6=0 1 2 3 6 4개
+        let a = document.getElementById('result').innerHTML;
+        console.log(a);
+        document.getElementById('btn').addEventListener('click',()=>{
+            let count=0;
+            let num = Number(document.getElementById('num').value);
+            let str = `${a}`;
+            for(let i=1; i<=num; i++){
+                if(num % i==0){
+                    str += `${i} `;
+                    count++;
+                }
+            }
+            document.getElementById('result').innerHTML = `${a} 총 ${count}개`;
+        })
+    </script>
+</body>
+</html>

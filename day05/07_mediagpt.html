@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+.header h1 {
+    text-align: left;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.text {
+    flex: 2;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.additional-images img {
+    width: 48%;
+    height: auto;
+    border-radius: 8px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>IN'O</h1>
+        </div>
+        <div class="content">
+            <div class="image">
+                <img src="../image/감성.jpg" alt="Sunset">
+            </div>
+            <div class="text">
+                <h2>Portfolio</h2>
+                <h3>Make Hardware Soft</h3>
+                <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also included.</p>
+            </div>
+        </div>
+        <div class="additional-images">
+            <img src="../image/꽃.jpg" alt="Bag">
+            <img src="../image/도심.jpg" alt="City">
+        </div>
+    </div>
+</body>
+</html>

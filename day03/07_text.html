@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    text 속성
+    - text-align : 정렬 left, right, center, justify(양쪽)
+    - text-indent : 들여쓰기
+    - text-decoration : 선긋기
+        none : 없음.
+        underline : 밑줄
+        overline : 윗줄
+        line-through : 가운데줄
+    - text-shadow : 글자 그림자
+        - 좌측px 상단px 번짐정도px 색상
+        - 중첩가능(멀티가능), (,)콤마로 계속 이어나갈 수 있음.
+    - letter-spacing : 글자간 간격
+    - word-spacing : 단어간 간격
+    - line-height : 글자 기준선 높이
+    - white-space : 컨텐츠 감싸기 방법
+        - wrap : 여러 줄 만들기
+        - nowarp : 한줄로 처리
+    - text-overflow : 텍스트가 범위를 넘어가는 경우 처리
+        - ellipsis : 넘어가는 부분의 단위를 ...으로 처리
+    - overflow : 요소가 넘어가면 어떻게 처리할지 결정
+        - hidden : 숨김
+        - scroll : 스크롤바 생성
+        - auto : 스그롤 오토 생성
+    -->
+    <!-- 
+    css 표준단위
+    px : 픽셀
+    % : 퍼센트 현재 값을 기준으로 %
+    em : 배수, 부모값을 기준으로 배수
+    rem : 배수, 문선의 값을 기준으로 배수
+    cm/mm/in => 각 단위
+    pt : 포인터 1pt => 1/72 in
+    pc : 피카소 1pc => 12pt
+    deg : 각도
+    -->
+    <style>
+        p{
+            text-indent: 20px;
+            text-align: justify;
+            /* word-spacing: 20px;
+            letter-spacing: 5px; */
+        }
+        .line{
+            width: 300px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed orci purus, porttitor quis mauris at, eleifend placerat turpis. Suspendisse maximus semper cursus. Maecenas aliquet commodo leo. Proin lorem ipsum, tristique vel facilisis non, commodo eget magna. Nulla facilisi. Proin elit orci, elementum quis ornare vestibulum, mollis ut urna. Fusce vehicula vulputate quam nec sodales. Integer at enim posuere, hendrerit augue eu, accumsan nibh. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec neque ex, vulputate et vestibulum ac, tempus sit amet risus. Praesent consectetur ante ac lorem porttitor interdum. Fusce non urna non est sagittis pulvinar eu a velit. Nunc eu fringilla nunc. Sed in mauris dictum, accumsan est a, faucibus nisi. Mauris varius dolor velit, sed feugiat nibh malesuada id. Nulla volutpat libero id ipsum rutrum convallis.
+    </p>
+    <p class="line">
+        Vestibulum gravida eget diam nec rutrum. Praesent convallis erat et sem fermentum, a consectetur risus mattis. Aliquam erat volutpat. Donec vitae consequat enim, in suscipit arcu. Fusce eu justo lacinia ligula feugiat fringilla sit amet at arcu. Phasellus a iaculis quam. Aenean a molestie nibh. Donec porttitor maximus purus, vitae semper erat tempus a. Pellentesque euismod, neque sed pharetra vulputate, est augue vestibulum purus, a vehicula turpis felis vel ligula.
+    </p>
+</body>
+</html>

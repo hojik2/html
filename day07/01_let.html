@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 자바 스크립트 파일 연결 -->
+    <script src="01_let.js"></script>
+
+    <script> 
+    // 자바 스크립트 안 (주의요함!)
+    console.log("head 태그안 자바스크립트 작성");
+    </script>
+    <style>
+        /* css 영역 */
+    </style>
+</head>
+<body>
+    <script>
+        // 자바 스크립트 안 (주의요망)
+        console.log("body 태그 상단 자바스크립트 작성");
+    </script>
+    <h1>자바스크립트 사용법</h1>    
+    <ol>
+        <li>
+            &lt;script&gt; 내부에 작성 &lt;/script&gt;
+        </li>
+        <li>
+            파일명 .js 파일을 만들어서 코드 작성 후 src 경로로 연결
+        </li>
+        <li>
+            head 안에도 script 작성가능 (사용시 주의요함!)
+        </li>
+        <li>
+            body 태그 내 가장 하단에 script를 위칫시켜 작성 (가장 많이 사용)
+        </li>
+        <li>
+            마지막 끝처리 ; (필수사항은 아님.)
+        </li>
+    </ol>
+    <!-- 자바 스크립트 파일 연결 -->
+    <script src="파일연결.js"></script>
+    <script>
+        // 직접작성(일반적)
+        console.log("body 태그 하단 자바스크립트 작성");
+    </script>
+</body>
+</html>

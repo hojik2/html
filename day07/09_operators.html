@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>연산자</h1>
+    <ul>
+        <li>
+            산술연산자 : 사칙연산(+ - * /), 나머지(%), 제곱(**) 등...
+        </li>
+        <li>
+            대입연산자 : = += *= -= 자체값을 연산하여 다시 대입
+            a = b : a 변수에 b 변수의 값을 대입하라
+            a += b : a변수에 a+ b 값을 대입하라 a = a + b
+        </li>
+        <li>
+            비교연산자 : 이상(>=), 이하(<=), 초과(>), 미만(<), 같다(==), 다르다(!=)
+            비교연산자의 결과는 항상 true / false
+        </li>
+        <li>
+            논리연산자 : and(&&), or(||), not(!) 
+        </li>
+        <li>
+            증강연산자 : ++(1씩 증가) --(1씩 감소) 
+        </li>
+        <li>
+            비트연산자 : 웹 분야에서는 활용도가 낮음.
+        </li>
+        <li>ssssss
+            삼항연산자 : (조건식) ? true : false
+        </li>
+    </ul>
+    <script>
+        let kor = 90;
+        let eng = 100;
+        let math = 78;
+        
+        let sum = kor + eng + math
+        console.log(sum);
+        // 각 점수를 표시하고, 세점수의 합계와 평균을 출력
+        console.log(`국어:${kor} 영어:${100} 수학:${78}`);
+        console.log(sum);
+        console.log(sum/3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+    box의 속성
+    width : 가로길이
+    height : 세로길이
+    margin : box의 바깥여백
+    padding : box의 안쪽여백
+    box-sizing : box의 크기를 지정하는 속성
+    box-sizing에 따라 width가 컨텐츠의 크기가 될수도 있고,
+    박스 전체의 크기가 될수도 있음.
+
+    - border-box => width = 컨텐츠의 가로 + padding + border
+    - content-box => width = 컨텐츠의 가로
+    
+    width = 100px padding = 5px border = 1px (left + right)
+    border-box = padding 5 + 5 + 1 + 1  + 88 = 100px => 많이 사용
+    content-box = 5 + 5 + 1 + 1 + 100 = 112px
+    -->
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: aquamarine;
+            box-sizing: border-box;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: aquamarine;
+            box-sizing: content-box;
+        }
+        .box2{
+            font-size: large;
+            width: 50px;
+            height: 25px;
+            border: 1px solid black;
+            padding: 5px;
+            background-color: beige;
+
+        }
+        .box2{
+            margin: 50px;
+            font-family: "DM_Sans", sans-serif;
+            font-size: 40px;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            background-color: green;
+            color: white;
+            width: 150px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box1"></div>
+
+    <!-- box2를 클릭하면 naver로 이동하는 버튼(div)을 생성 -->
+    <a href="http://www.naver.com"target="_blank">
+        <div class="box2">naver</div>
+    </a>
+</body>
+</html>

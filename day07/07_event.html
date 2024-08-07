@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .s{
+            background-color: bisque;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>이벤트 객체 : 전역객체로서 모든 태그에 객체를 참조시킬 수 있다.</h1>
+    <ul class="uls">
+        <li>
+            a tag / button tag에 이벤트를 참조시켜 사용
+            클릭에 대한 반응을 기대할 수 있게 만드는 것이 일반적
+        </li>
+        <li>
+            a tag는 자체 이동 (href 속성)이 구현
+            별도로 이동을 막는 코드가 필요
+        </li>
+        <li>
+            객체에 이벤트를 부여하는 방식이 크게 3가지
+        </li>
+        <li>
+            각자 목적과 작동방식이 좀 다름
+        </li>
+    </ul>
+    <ul class="uls">
+        <li>
+            화면에 출력 영역을 document(영역 / 객체) 라고 한다.
+        </li>
+        <li>
+            DOM 영역
+        </li>
+        <li>
+            tag : html element, 속성은 attribute, 일반텍스트 textNode라고 함
+        </li>
+        <li>
+            html 객체를 가져올때 
+            id 속성으로 가져오기 : getElementById('idName')
+            class 속성으로 가져오기 : querySelector('selector') => . #
+        </li>
+        <li>
+            html 화면에 출력할 때
+            Html element 로 출력 : innerHtml 라는 property를 사용
+            일반 텍스트로 출력 : innerText라는 property를 사용
+        </li>
+    </ul>
+    <button onclick="eventFun()">클릭해보세요.</button>
+    <button onclick="eventFun2()">클릭해보세요.</button>
+    <button onclick="eventFun3('버튼3번입니다.')">클릭해보세요.</button>
+    <br>
+    <button id="btn">button</button>
+    <button id="test">test</button>
+
+    <h1 id="printResult"></h1>
+
+    <script>
+        const printResult = document.getElementById('printResult')
+        console.log(printResult);
+
+        // onclick = 하나의 이벤트만 등록가능.
+        const test = document.getElementById('test');
+        test.onclick = function(){
+            alert("Hi~!!!!!!");
+        }
+
+        // button #btn 객체 가져오기
+        document.getElementById('btn').addEventListener('click', ()=>{
+            // addEventListener 씌우는 방법
+            // 여러개의 이벤트를 등록할 수 있음. (자주 사용)
+            alert('button click!!');
+        })
+
+        function eventFun(){
+            printResult.innerText='첫번째 버튼을 클릭했습니다.';
+        }
+        function eventFun2(){
+            printResult.innerHTML=`<span class="s">버튼 2번을 클릭했습니다.</span>`;
+        }
+        function eventFun3(param1){
+            printResult.innerHTML=`<span class="s">${param1}</span>`;
+        }
+
+        const ul=document.querySelectorAll('.uls');
+        console.log(ul);
+        console.log(ul[0]);
+        console.log(ul[1]);
+
+    </script>
+</body>
+</html>
